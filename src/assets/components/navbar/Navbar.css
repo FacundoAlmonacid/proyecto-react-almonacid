@@ -1,0 +1,25 @@
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-around;
+  background: rgb(56, 76, 120);
+  background: linear-gradient(
+    50deg,
+    rgba(56, 76, 120, 1) 5%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(149, 146, 31, 1) 49%,
+    rgba(255, 255, 255, 1) 77%,
+    rgba(52, 49, 111, 1) 96%
+  );
+}
+
+.Categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  
+}
