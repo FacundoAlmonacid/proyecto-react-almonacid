@@ -1,12 +1,29 @@
+import ItemList from "./ItemList";
+import { products } from "../../products";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+  const { name } = useParams();
 
-const ItemListContainer = ({greeting}) => {
-  return (
-    <div>
-        <h1>{greeting}</h1>
+  useEffect(() => {
+    const getProducts = new Promise((resolve, reject) => {
+      let x = true;
+      let arrayFiltered = products.filter(
+        (product) => product.category === name
+      );
+      if (x) {
+        resolve(name ? arrayFiltered : products);
+      }
+    });
 
-    </div>
-  )
-}
+    getProducts.then((res) => {
+      setItems(res);
+    });
+  }, [name]);
 
-export default ItemListContainer
+  return <ItemList items={items} />;
+};
+
+export default ItemListContainer;

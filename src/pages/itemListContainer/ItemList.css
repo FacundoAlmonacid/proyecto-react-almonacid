@@ -1,0 +1,10 @@
+.raro{
+  background: -webkit-linear-gradient(90deg, #fffdd0,#f5f5dc,#d2b48c);
+  background: linear-gradient(90deg, #fffdd0,#f5f5dc,#d2b48c);
+     
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+
