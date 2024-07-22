@@ -3,25 +3,30 @@ import ItemListContainer from "./pages/itemListContainer/ItemListContainer";
 import Cart from "./pages/cart/Cart";
 import NavBar from "./components/navbar/NavBar";
 import ItemDetailContainer from "./pages/itemDetailContainer/ItemDetailContainer";
+import Checkout from "./pages/checkout/Checkout";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
-
-
   return (
-   <BrowserRouter>
-      <Routes>
+    <BrowserRouter>
+      <CartContextProvider>
 
 
-        <Route element={<NavBar/>}>
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="category/:name" element={<ItemListContainer />}/>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/itemDetail/:id" element={<ItemDetailContainer/>} />
-        </Route>
-         
+        <Routes>
+          <Route element={<NavBar />}>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="category/:name" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Route>
+
           <Route path="*" element={<h1>NOT FOUND</h1>} />
+        </Routes>
 
-      </Routes>
-    </BrowserRouter> 
-  )}
+        
+      </CartContextProvider>
+    </BrowserRouter>
+  );
+}
 export default App;

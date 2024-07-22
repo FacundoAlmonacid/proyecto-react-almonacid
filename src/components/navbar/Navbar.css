@@ -1,25 +1,26 @@
-.navbarContainer {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  justify-content: space-around;
-  background: rgb(56, 76, 120);
-  background: linear-gradient(
-    50deg,
-    rgba(56, 76, 120, 1) 5%,
-    rgba(255, 255, 255, 1) 25%,
-    rgba(149, 146, 31, 1) 49%,
-    rgba(255, 255, 255, 1) 77%,
-    rgba(52, 49, 111, 1) 96%
-  );
-}
+.customNavBar {
+  background: hsla(208, 7%, 55%, 1);
 
-.Categorias {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  
+  background: linear-gradient(
+    90deg,
+    hsla(208, 7%, 55%, 1) 47%,
+    hsla(191, 5%, 40%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(208, 7%, 55%, 1) 47%,
+    hsla(191, 5%, 40%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(208, 7%, 55%, 1) 47%,
+    hsla(191, 5%, 40%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#858e96", endColorstr="#60696b", GradientType=1 );
+
+
+
 }
