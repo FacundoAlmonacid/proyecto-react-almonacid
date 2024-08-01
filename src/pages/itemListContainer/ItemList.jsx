@@ -8,13 +8,6 @@ const ItemList = ({ items }) => {
 
   <Container>
 
-<Box>
-
-
-
-
-</Box>
-
 
 
     <Box className="customBox" display="flex" flexWrap="wrap" justifyContent="center" gap={2}>

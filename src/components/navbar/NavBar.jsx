@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link, Outlet } from "react-router-dom";
-import './NavBar.css';
+
 
 const pages = ["Todas", "Silver", "Combined"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -41,7 +41,25 @@ const ResponsiveAppBar = ({ pages, settings }) => {
 
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+        <Box
+        component={Link}
+        to="/"
+        sx={{
+          display: { xs: "none", md: "flex" },
+          mr: 1,
+          height: '60px',
+         // Ajusta el tamaño según sea necesario
+        }}
+      >
+        <img
+
+          src="https://res.cloudinary.com/dmax0s0fu/image/upload/v1721851769/cerebrodiamente_m1wv9i_-_Profile_Picture_aqmfys.png"
+          alt="Logo"
+          style={{ height: '100% ',  borderRadius:'30px' }} 
+       
+        />
+      </Box>
+          
           <Typography
             variant="h6"
             noWrap
@@ -57,8 +75,12 @@ const ResponsiveAppBar = ({ pages, settings }) => {
               textDecoration: "none",
             }}
           >
-            LOGO
+           
+            
           </Typography>
+
+
+
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

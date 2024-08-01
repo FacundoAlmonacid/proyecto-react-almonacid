@@ -5,10 +5,13 @@ import NavBar from "./components/navbar/NavBar";
 import ItemDetailContainer from "./pages/itemDetailContainer/ItemDetailContainer";
 import Checkout from "./pages/checkout/Checkout";
 import CartContextProvider from "./context/CartContext";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <BrowserRouter>
+
+    <Toaster richColors position="top-center"/>
       <CartContextProvider>
 
 
@@ -18,7 +21,7 @@ function App() {
             <Route path="category/:name" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<Checkout/>} />
           </Route>
 
           <Route path="*" element={<h1>NOT FOUND</h1>} />

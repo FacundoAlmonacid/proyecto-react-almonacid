@@ -1,14 +1,18 @@
 
 import { initializeApp } from "firebase/app";
 
+import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBuVvnCGNUWJKfzVB28xFYqw9w8ho5psZ4",
-  authDomain: "react-joyeria-proyect.firebaseapp.com",
-  projectId: "react-joyeria-proyect",
-  storageBucket: "react-joyeria-proyect.appspot.com",
-  messagingSenderId: "454540084580",
-  appId: "1:454540084580:web:c0404dc1e30591503fe671"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTH,
+  projectId: import.meta.env.VITE_PROJECT,
+  storageBucket: import.meta.env.VITE_STORAGE,
+  messagingSenderId: import.meta.env.VITE_MESSAGING,
+  appId: import.meta.env.VITE_APIID
 };
 
 
 const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app)
