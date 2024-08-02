@@ -23,7 +23,7 @@ const ItemListContainer = () => {
         return { ...product.data(), id: product.id };
       });
       setItems(arrayValido);
-      console.log(arrayValido);
+      ;
     });
   }, [name]);
 
